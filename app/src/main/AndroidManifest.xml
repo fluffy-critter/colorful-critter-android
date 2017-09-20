@@ -15,13 +15,12 @@
       android:icon="@drawable/love"
       android:label="LÖVE for Android"
       android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-      <service android:name="org.love2d.android.DownloadService" />
       <activity
         android:name="org.love2d.android.GameActivity"
         android:configChanges="orientation|screenSize"
         android:label="LÖVE for Android"
         android:launchMode="singleTop"
-        android:screenOrientation="landscape" >
+        android:screenOrientation="sensorLandscape" >
         <intent-filter>
           <action android:name="android.intent.action.MAIN" />
           <category android:name="android.intent.category.LAUNCHER" />
@@ -63,4 +62,4 @@
         </intent-filter>
       </activity>
     </application>
-</manifest> 
+</manifest>
