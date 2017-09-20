@@ -12,7 +12,7 @@
 
   <application
       android:allowBackup="true"
-      android:icon="@drawable/love"
+      android:icon="@drawable/critter"
       android:label="Colorful Critter"
       android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
       <activity
