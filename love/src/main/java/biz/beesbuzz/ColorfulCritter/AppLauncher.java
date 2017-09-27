@@ -32,9 +32,12 @@ public class AppLauncher extends Service {
             Log.d(LOG_TAG, "checking");
 
             SharedPreferences sp = CritterActivity.getPrefs(AppLauncher.this);
+            boolean state = sp.getBoolean("running", false);
+            Log.d(LOG_TAG, "state = " + state);
             if (!sp.getBoolean("running", false)) {
                 Log.d(LOG_TAG, "launching");
                 Intent intent = new Intent(AppLauncher.this, CritterActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             } else {
                 Log.d(LOG_TAG, "already running");
@@ -64,9 +67,9 @@ public class AppLauncher extends Service {
             public void run() {
                 mHandler.post(enforceAppRunning);
             }
-        }, 0, 5000);
+        }, 1000, 1000);
 
-         listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+        listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
             public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
                 mHandler.post(enforceAppRunning);
             }

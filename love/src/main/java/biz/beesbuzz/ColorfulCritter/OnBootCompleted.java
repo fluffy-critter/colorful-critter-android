@@ -17,4 +17,6 @@ public class OnBootCompleted extends BroadcastReceiver {
         Log.d(LOG_TAG, "Received onBootCompleted message");
         context.startService(new Intent(context, AppLauncher.class));
     }
+
+
 }

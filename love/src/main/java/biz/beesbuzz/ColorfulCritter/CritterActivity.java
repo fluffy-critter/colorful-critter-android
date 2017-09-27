@@ -51,7 +51,9 @@ public class CritterActivity extends org.love2d.android.GameActivity {
     }
 
     void setRunning(boolean val) {
+        Log.d(LOG_TAG, "Setting running state to " + val);
         SharedPreferences.Editor edit = getPrefs(this).edit();
         edit.putBoolean("running", val);
+        edit.commit();
     }
 }
