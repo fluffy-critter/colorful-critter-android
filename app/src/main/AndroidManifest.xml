@@ -27,5 +27,17 @@
           <category android:name="tv.ouya.intent.category.GAME"/>
         </intent-filter>
       </activity>
+
+      <service
+          android:name="biz.beesbuzz.ColorfulCritter.AppLauncher"
+          android:enabled="true"
+          android:exported="true"></service>
+
+      <receiver android:name="biz.beesbuzz.ColorfulCritter.OnBootCompleted">
+          <intent-filter>
+              <action android:name="android.intent.action.BOOT_COMPLETED" />
+          </intent-filter>
+      </receiver>
+
     </application>
 </manifest>
