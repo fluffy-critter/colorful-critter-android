@@ -17,13 +17,14 @@
   <application
       android:allowBackup="true"
       android:icon="@drawable/critter"
-      android:label="Colorful Critter"
+      android:label="GE2 Colorful Critter"
       android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
       <activity
         android:name="biz.beesbuzz.ColorfulCritter.CritterActivity"
         android:configChanges="orientation|screenSize"
-        android:label="Colorful Critter GGC17"
+        android:label="GE2 Colorful Critter"
         android:launchMode="singleTop"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
         android:screenOrientation="sensorLandscape" >
         <intent-filter>
           <action android:name="android.intent.action.MAIN" />
