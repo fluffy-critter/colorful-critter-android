@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.View;
 
 public class CritterActivity extends org.love2d.android.GameActivity {
-        public static String LOG_TAG = "cc.CritterActivity";
+    public static String LOG_TAG = "cc.CritterActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
